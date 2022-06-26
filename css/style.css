@@ -677,6 +677,7 @@ a {
 }
 /*  remove for gif */
 .tile__img {
+	margin:0px 0px 0px 20px;/*  remove for gif */
 	max-width: 65%;
 	text-align: center;
 	height: auto;
