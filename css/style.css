@@ -417,14 +417,14 @@ img {
 	position: fixed;
 	top: 0;
 	right: 0;
-	display: block;
+	display: none;
 }
 
 .top-left-decoration {
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: block;
+	display: none;
 }
 
 .title h1 {
@@ -662,9 +662,7 @@ a {
 	height: auto;
 	object-fit: cover;
 }
-.sakura-falling{
-	display: hidden;
-}
+
 @media only screen and (max-width: 768px) {
 	.tile__img {
 		max-width: 85%;
@@ -672,7 +670,18 @@ a {
 		height: auto;
 		object-fit: cover;
 	}
-	.sakura-falling{
+	.top-right-decoration {
+		position: fixed;
+		top: 0;
+		right: 0;
 		display: block;
 	}
+	
+	.top-left-decoration {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+	}
+	
   }
