@@ -22,7 +22,7 @@
  */
 
 //  document.getElementById("my_audio").play();
-$(document).on('scroll', function(){
+document.addEventListener('scroll', function(){
     document.getElementById("my_audio").play();
     console.log('Shaadi me zaroor aana');
 });
