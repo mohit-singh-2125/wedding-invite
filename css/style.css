@@ -446,6 +446,13 @@ img {
 	color: #e25c67;
 	line-height: 1;
 }
+.title img {
+    height: 50px;
+	width: 50px;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
 
 .dance-med {
 	font-family: 'Dancing Script', cursive;
@@ -540,7 +547,9 @@ body {
 	text-align: center;
 	color: #fff;
 	padding: 8px;
+	font-family: 'Oleo Script', cursive;
 	/* margin-right: 8px; */
+	font-size: 1rem;
 }
 .invite {
 	width: auto;
@@ -550,6 +559,9 @@ body {
 	text-align: center;
 	color: #fff;
 	padding: 8px;
+	font-family: 'Oleo Script', cursive;
+	/* margin-right: 8px; */
+	font-size: 1rem;
 	/* margin-right: 8px; */
 }
 
