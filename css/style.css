@@ -662,7 +662,18 @@ a {
 	height: auto;
 	object-fit: cover;
 }
-
+.bottom-left-play-pause {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+.bottom-left-pause-pause {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	/* display: block; */
+}
 @media only screen and (max-width: 768px) {
 	.tile__img {
 		max-width: 85%;

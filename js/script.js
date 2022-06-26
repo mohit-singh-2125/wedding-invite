@@ -20,11 +20,25 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-$(document).on('click', function(){
-    document.getElementById("my_audio").play();
-    console.log('Shaadi me zaroor aana');
-});
 
+ document.getElementById("my_audio").play();
+// $(document).on('click', function(){
+//     document.getElementById("my_audio").play();
+//     console.log('Shaadi me zaroor aana');
+// });
+
+
+function playAudio() { 
+    document.getElementById("play").style.display="none";
+    document.getElementById("pause").style.display="block";
+    document.getElementById("my_audio").play();
+  } 
+  
+  function pauseAudio() { 
+    document.getElementById("play").style.display="block";
+    document.getElementById("pause").style.display="none";
+    document.getElementById("my_audio").pause();
+  } 
 // Set the date we're counting down to
 var countDownDate = new Date("Nov 28, 2022 00:00:00").getTime();
 
