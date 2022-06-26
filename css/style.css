@@ -582,6 +582,7 @@ body {
 	width: 180px;
 	height: 160px;
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -667,12 +668,26 @@ a {
 	font-size: 12px;
 	letter-spacing: 0pt;
 }
-
+/*  remove for gif */
+.tile__img_{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/*  remove for gif */
 .tile__img {
 	max-width: 65%;
 	text-align: center;
 	height: auto;
 	object-fit: cover;
+}
+.std__img {
+	max-width: 15%;
+	text-align: center;
+	height: auto;
+	object-fit: cover;
+	margin: -30px;
 }
 .bottom-left-play-pause {
 	position: fixed;
@@ -705,6 +720,20 @@ a {
 		top: 0;
 		left: 0;
 		display: block;
+	}
+	/* remove for gif */
+	.tile__img {
+		max-width: 127%;
+		text-align: center;
+		height: auto;
+		object-fit: cover;
+	}
+	.std__img {
+		max-width: 30%;
+		text-align: center;
+		height: auto;
+		object-fit: cover;
+		margin: -15px;
 	}
 	
   }
