@@ -6,13 +6,22 @@
       $('.sakura-falling').sakura();
 })(jQuery);
 
+function ssss() {
+  // alert("Increase your phone volume and press ok to play music")
+  document.getElementById("my_audio").play();
+  // if (confirm("Increase your phone volume and press ok to play music")) {
+  //   document.getElementById("my_audio").play();
+  // } else {
+  //   // txt = "You pressed Cancel!";
+  // }
+  // document.getElementById("bod").innerHTML = txt;
+}
 
-
- document.getElementById("my_audio").play();
-$(document).on('click', function(){
-    document.getElementById("my_audio").play();
-    console.log('Shaadi me zaroor aana');
-});
+//  document.getElementById("my_audio").play();
+// $(document).on('click', function(){
+//     document.getElementById("my_audio").play();
+//     console.log('Shaadi me zaroor aana');
+// });
 
 
 function playAudio() { 
