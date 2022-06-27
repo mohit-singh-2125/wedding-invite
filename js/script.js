@@ -7,13 +7,12 @@
 })(jQuery);
 
 function ssss() {
-  alert("Increase your phone volume and press ok to play music")
-  document.getElementById("my_audio").play();
-  // if (confirm("Increase your phone volume and press ok to play music")) {
-  //   document.getElementById("my_audio").play();
-  // } else {
-  //   // txt = "You pressed Cancel!";
-  // }
+
+  if (confirm("Increase your phone volume and press ok to play music")) {
+    document.getElementById("my_audio").play();
+  } else {
+    // txt = "You pressed Cancel!";
+  }
   // document.getElementById("bod").innerHTML = txt;
 }
 
