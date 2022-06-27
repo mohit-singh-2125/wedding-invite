@@ -7,13 +7,8 @@
 })(jQuery);
 
 function ssss() {
-
-  if (confirm("Increase your phone volume and press ok to play music")) {
-    document.getElementById("my_audio").play();
-  } else {
-    // txt = "You pressed Cancel!";
-  }
-  // document.getElementById("bod").innerHTML = txt;
+  alert("Tap on the screen and increase your phone volume to have best experience")
+  document.getElementById("my_audio").play();
 }
 
 //  document.getElementById("my_audio").play();
