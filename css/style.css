@@ -684,19 +684,21 @@ a {
 	object-fit: cover;
 }
 .std__img {
-	max-width: 15%;
+	max-width: 1.5rem;
 	text-align: center;
 	height: auto;
 	object-fit: cover;
 	margin: -30px;
 }
 .bottom-left-play-pause {
+	max-width: 1.5rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	display: none;
 }
 .bottom-left-pause-pause {
+	max-width: 1.5rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;

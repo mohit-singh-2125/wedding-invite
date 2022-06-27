@@ -6,16 +6,16 @@
       $('.sakura-falling').sakura();
 })(jQuery);
 
-function ssss() {
-  alert("Tap on the screen and increase your phone volume to have best experience")
-  document.getElementById("my_audio").play();
-}
+// function ssss() {
+//   alert("Tap on the screen and increase your phone volume to have best experience")
+//   document.getElementById("my_audio").play();
+// }
 
-//  document.getElementById("my_audio").play();
-// $(document).on('click', function(){
-//     document.getElementById("my_audio").play();
-//     console.log('Shaadi me zaroor aana');
-// });
+ document.getElementById("my_audio").play();
+$(document).on('click', function(){
+    document.getElementById("my_audio").play();
+    console.log('Shaadi me zaroor aana');
+});
 
 
 function playAudio() { 
