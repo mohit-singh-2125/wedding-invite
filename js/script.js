@@ -28,9 +28,11 @@ function ssss() {
       lng: res.coords.longitude
     }
     const options = {
-      method: 'GET',
+      method: 'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(data)
     };
-    fetch(`http://api.positionstack.com/v1/reverse?access_key=714f37a94f12ed154c1589c14619657a&query=${data.lat},${data.lng}`, options)
+    fetch(`https://getinvitelocation.netlify.app/.netlify/functions/server/getLocation`, options)
 	.then(response => response.json())
 	.then(response =>  sendEmail(response))
 	.catch(err => console.error(err));
