@@ -677,7 +677,7 @@ a {
 }
 /*  remove for gif */
 .tile__img {
-	margin:0px 0px 0px 20px;/*  remove for gif */
+	/* margin:0px 0px 0px 20px; remove for gif */
 	max-width: 65%;
 	text-align: center;
 	height: auto;
@@ -725,12 +725,12 @@ a {
 		display: block;
 	}
 	/* remove for gif */
-	.tile__img {
+	/* .tile__img {
 		max-width: 127%;
 		text-align: center;
 		height: auto;
 		object-fit: cover;
-	}
+	} */
 	.std__img {
 		max-width: 30%;
 		text-align: center;
