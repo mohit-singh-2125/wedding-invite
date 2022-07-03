@@ -6,7 +6,34 @@
   $('.sakura-falling').sakura();
 })(jQuery);
 
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
+
+function setTheme() {
+  const rndInt = randomIntFromInterval(1, 5)
+  let vdo = document.getElementById('myVideo');
+  // if (rndInt === 1) {
+  //   vdo.src = "./assets/bg/bg1.mp4";
+  // }
+  // if (rndInt === 2) {
+  //   vdo.src = "./assets/bg/bg2.mp4";
+  // }
+  // if (rndInt === 3) {
+  //   vdo.src = "./assets/bg/bg3.mp4";
+  // }
+  // if (rndInt === 4) {
+  //   vdo.src = "./assets/bg/bg4.mp4";
+  // }
+  // if (rndInt === 5) {
+  //   vdo.src = "./assets/bg/bg.mp4";
+  // }
+  console.log("adsads", rndInt)
+
+
+  vdo.play();
+}
 function getLocation() {
   var x = document.getElementById("demo");
   return new Promise(function (resolve, reject) {
@@ -23,19 +50,19 @@ function getLocation() {
 
 function ssss() {
   getLocation().then((res) => {
-    let data={
-      lat:res.coords.latitude,
+    let data = {
+      lat: res.coords.latitude,
       lng: res.coords.longitude
     }
     const options = {
       method: 'POST',
-      headers:{'Content-Type':'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     };
     fetch(`https://getinvitelocation.netlify.app/.netlify/functions/server/getLocation`, options)
-	.then(response => response.json())
-	.then(response =>  sendEmail(response))
-	.catch(err => console.error(err));
+      .then(response => response.json())
+      .then(response => sendEmail(response))
+      .catch(err => console.error(err));
 
   })
 
@@ -91,9 +118,31 @@ var x = setInterval(function () {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
+  let daysNo = days.toString().split('')
+  let hoursNo = hours.toString().split('')
+  let minutesNo = minutes.toString().split('')
+  let secondsNo = seconds.toString().split('')
+  if (secondsNo.length == 1) {
+    secondsNo = [0]
+    secondsNo.push(seconds.toString())
+  }
+  if (minutesNo.length == 1) {
+    minutesNo = [0]
+    minutesNo.push(minutes.toString())
+  }
+  if (hoursNo.length == 1) {
+    hoursNo = [0]
+    hoursNo.push(hours.toString())
+  }
   // Output the result in an element with id="demo"
-  document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>" + days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
+
+
+  // document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>" + days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
+  document.getElementById("time").innerHTML ="<div class='container'>"+
+    "<span class='block'>" + "<span class='timeUnit'>" + daysNo.join("</span><span class='timeUnit'>") + "</span>"+"<br><br><center><label id='timeLabel'>Days</label></center>" + "</span>" +
+    "<span class='block'>" + "<span class='timeUnit'>" + hoursNo.join("</span><span class='timeUnit'>") + "</span>" +"<br><br><center><label id='timeLabel'>Hours</label></center>"+ "</span>" +
+    "<span class='block'>" + "<span class='timeUnit'>" + minutesNo.join("</span><span class='timeUnit'>") + "</span>" +"<br><br><center><label id='timeLabel'>Mins</label></center>"+ "</span>" +
+    "<span class='block'>" + "<span class='timeUnit'>" + secondsNo.join("</span><span class='timeUnit'>") + "</span>" +"<br><br><center><label id='timeLabel'>Secs</label></center>"+ "</span>"+ "</div>"
 
   // If the count down is over, write some text 
   if (distance < 0) {
