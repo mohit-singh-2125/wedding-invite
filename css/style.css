@@ -555,6 +555,11 @@ body {
 	margin: 20px 0px 6px 17px;
 	animation: zoom-in-zoom-out 1s ease infinite;
 }
+.couple {
+	width: 20px;
+	margin: 20px 0px 6px 25px;
+	animation: zoom-in-zoom-out 1s ease infinite;
+}
 
 @keyframes zoom-in-zoom-out {
 	0% {
@@ -577,6 +582,9 @@ body {
 	background-color: #eee;
 	border-radius: 20px;
 	font-size: 16px; */
+	font-family: 'Courgette', cursive;
+	font-size: 1.5rem;
+	color: #a22140;
 }
 
 .venue {
@@ -591,7 +599,9 @@ body {
 	/* margin-right: 8px; */
 	font-size: 1rem;
 }
-
+#mrAndMrs{
+	display: none;
+}
 .invite {
 	width: auto;
 	height: auto;
@@ -694,6 +704,11 @@ body {
 	text-align: center;
 	font-size: 26px;
 	margin: 24px 0px -16px 0px;
+	font-family: 'Caveat', cursive;
+}
+#engage {
+	color: #564861;
+	font-size: 26px;
 	font-family: 'Caveat', cursive;
 }
 
@@ -878,6 +893,11 @@ a {
 		margin-right: 1px;
 
 	}
+	.couple {
+		width: 20px;
+		margin: 24px 43px 0px 63px;
+		animation: zoom-in-zoom-out 1s ease infinite;
+	  }
 
 }
 
@@ -898,5 +918,10 @@ a {
 		margin-right: 0.5px;
 
 	}
+	.couple {
+		width: 20px;
+		margin: 24px 43px 0px 63px;
+		animation: zoom-in-zoom-out 1s ease infinite;
+	  }
 
 }

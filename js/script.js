@@ -103,7 +103,6 @@ function pauseAudio() {
 }
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 28, 2022 11:30:00").getTime();
-
 // Update the count down every 1 second
 var x = setInterval(function () {
 
@@ -112,7 +111,18 @@ var x = setInterval(function () {
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-
+  if (distance < 0) {
+    countDownDate = new Date("Feb 27, 2023 22:30:00").getTime();
+    distance = countDownDate - now;
+    document.getElementById("impDate").innerHTML ="27 February 2023"
+    document.getElementById("impVenue").innerHTML ="Banshi Bhawan"
+    document.getElementById("venueLink").href ="https://goo.gl/maps/D53P8NLc4688vte59"
+    document.getElementById("getMarry").innerHTML ="Are getting married"
+    document.getElementById("countdownHead").innerHTML ="Wedding countdown"
+    document.getElementById("mrAndMrs").style.display ="block";
+    document.getElementById("daysHead").style.display ="none";
+    document.getElementById("engage").innerHTML ="wedding"
+  }
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -138,16 +148,22 @@ var x = setInterval(function () {
 
 
   // document.getElementById("time").innerHTML = "<div class='container'><div class='days block'>" + days + "<br>Days</div>" + "<div class='hours block'>" + hours + "<br>Hours</div>" + "<div class='minutes block'>" + minutes + "<br>Minutes</div>" + "<div class='seconds block'>" + seconds + "<br>Seconds</div></div>";
-  document.getElementById("time").innerHTML ="<div class='container'>"+
-    "<span class='block'>" + "<span class='timeUnit'>" + daysNo.join("</span><span class='timeUnit'>") + "</span>"+"<br><br><center><label id='timeLabel'>Days</label></center>" + "</span>" +
-    "<span class='block'>" + "<span class='timeUnit'>" + hoursNo.join("</span><span class='timeUnit'>") + "</span>" +"<br><br><center><label id='timeLabel'>Hours</label></center>"+ "</span>" +
-    "<span class='block'>" + "<span class='timeUnit'>" + minutesNo.join("</span><span class='timeUnit'>") + "</span>" +"<br><br><center><label id='timeLabel'>Mins</label></center>"+ "</span>" +
-    "<span class='block'>" + "<span class='timeUnit'>" + secondsNo.join("</span><span class='timeUnit'>") + "</span>" +"<br><br><center><label id='timeLabel'>Secs</label></center>"+ "</span>"+ "</div>"
-
+  document.getElementById("time").innerHTML = "<div class='container'>" +
+    "<span class='block'>" + "<span class='timeUnit'>" + daysNo.join("</span><span class='timeUnit'>") + "</span>" + "<br><br><center><label id='timeLabel'>Days</label></center>" + "</span>" +
+    "<span class='block'>" + "<span class='timeUnit'>" + hoursNo.join("</span><span class='timeUnit'>") + "</span>" + "<br><br><center><label id='timeLabel'>Hours</label></center>" + "</span>" +
+    "<span class='block'>" + "<span class='timeUnit'>" + minutesNo.join("</span><span class='timeUnit'>") + "</span>" + "<br><br><center><label id='timeLabel'>Mins</label></center>" + "</span>" +
+    "<span class='block'>" + "<span class='timeUnit'>" + secondsNo.join("</span><span class='timeUnit'>") + "</span>" + "<br><br><center><label id='timeLabel'>Secs</label></center>" + "</span>" + "</div>"
+ 
+    
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("time").innerHTML = "Bless the engaged couple for happy life!";
+    document.getElementById("getMarry").innerHTML ="Just got married"
+    document.getElementById("time").innerHTML = "Bless the married couple for happy life!";
+    document.getElementById("timeHead").style.display = 'none';
+    document.getElementById("time").style.marginTop = '-20px';
+    document.getElementById("time").style.marginBottom = '30px';
+    document.getElementById("dineAndDance").style.display = 'none';
   }
 }, 1000);
 var video = document.getElementById("myVideo");
