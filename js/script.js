@@ -83,9 +83,13 @@ function sendEmail(coords) {
       // alert("mail sent successfully")
     });
 }
-document.getElementById("my_audio").play();
+let audio ="my_audio";
+if(new Date("Oct 28, 2022 11:30:00").getTime()- new Date().getTime() > 0){
+  audio="engageAudio"
+}
+document.getElementById(audio).play();
 $(document).on('click', function () {
-  document.getElementById("my_audio").play();
+  document.getElementById(audio).play();
   console.log('Shaadi me zaroor aana');
 });
 
@@ -93,13 +97,13 @@ $(document).on('click', function () {
 function playAudio() {
   document.getElementById("play").style.display = "none";
   document.getElementById("pause").style.display = "block";
-  document.getElementById("my_audio").play();
+  document.getElementById(audio).play();
 }
 
 function pauseAudio() {
   document.getElementById("play").style.display = "block";
   document.getElementById("pause").style.display = "none";
-  document.getElementById("my_audio").pause();
+  document.getElementById(audio).pause();
 }
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 28, 2022 11:30:00").getTime();
