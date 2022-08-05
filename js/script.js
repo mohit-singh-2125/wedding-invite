@@ -126,6 +126,7 @@ var x = setInterval(function () {
     document.getElementById("mrAndMrs").style.display ="block";
     document.getElementById("daysHead").style.display ="none";
     document.getElementById("engage").innerHTML ="wedding"
+    document.getElementById("dineAndDance").innerHTML="dinner & dancing to follow"
   }
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
