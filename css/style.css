@@ -454,7 +454,12 @@ img {
 	padding: 0;
 	line-height: 1;
 }
-
+.hindi{
+	/* font-family: 'Tillana', cursive; */
+	font-family: 'Arya', sans-serif;
+	font-size: 40px;
+	color: #fd6542;
+}
 .dance-med {
 	font-family: 'Dancing Script', cursive;
 	font-weight: bolder;
@@ -659,7 +664,9 @@ body {
 	align-items: center;
 	text-align: center;
 }
-
+.dancer{
+	max-width: 20%;
+}
 /* .block {
 	width: 10rem;
 	height: 10rem;
