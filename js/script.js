@@ -9,7 +9,92 @@
 function randomIntFromInterval(min, max) { // min and max included 
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
+var lang = 'eng';
+function changeLang(typ){
+if(typ=='eng'){
+  document.getElementById("play").style.display = "none";
+  document.getElementById("pause").style.display = "block";
+  // document.getElementById("myForm").style.display = "none"
+  // document.getElementById("cf").style.display = "block";
 
+    $("#cf").load("#cf");
+
+}
+else{
+  document.getElementById("play").style.display = "block";
+  document.getElementById("pause").style.display = "none";
+  switchLng()
+}
+  
+
+}
+function selectLang(lng) {
+  lang = lng;
+  document.getElementById("myForm").style.display = "none"
+  document.getElementById("cf").style.display = "block";
+  if(lng=='hin'){
+    switchLng()
+  }
+}
+function switchLng(){
+  document.getElementById("grmName").innerHTML = "रोहित";
+  document.getElementById("grmName").style.fontFamily = 'Kalam';
+  document.getElementById("brdName").innerHTML = "मनिता";
+  document.getElementById("brdName").style.fontFamily = 'Kalam';
+  document.getElementById("getMarry").innerHTML = "शादी कर रहे हैं";
+  document.getElementById("getMarry").style.fontFamily = 'Ranga';
+  document.getElementById("getMarry").style.fontSize = '50px';
+  document.getElementById("vdet").innerHTML = "27 फरवरी 2023 को बंशी भवन, प्रयागराज, उत्तर प्रदेश में";
+  document.getElementById("vdet").style.fontFamily = 'Pragati Narrow';
+  document.getElementById("vdet").style.fontSize = '30px';  
+  document.getElementById("countdownHead").innerHTML = "शादी के लिए बचा समय";
+  document.getElementById("countdownHead").style.fontFamily = 'Inknut Antiqua';
+  document.getElementById("countdownHead").style.fontSize = '20px';
+  document.getElementById("daysHead").innerHTML = "जब तक हम पति और पत्नी नहीं बन जाते "+"<span><img class='ring' src='./assets/img/ring.png' alt=''></span>";
+  document.getElementById("daysHead").style.fontFamily = 'Inknut Antiqua';
+  document.getElementById("daysHead").style.fontSize = '20px';
+  document.getElementById("venueBut").innerHTML = "शादी के लिए जगह";
+  document.getElementById("venueBut").style.fontFamily = 'Yantramanav';
+  document.getElementById("dineAndDance").innerHTML = "आते समय अपने डांसिंग शूज़ लेकर आएं";
+  document.getElementById("dineAndDance").style.fontFamily = 'Kalam';
+  document.getElementById("dineAndDance").style.fontSize = '25px';
+  document.getElementById("inv").innerHTML = "परमपिता परमात्मा की कृपा से,<br/>हम आपको और आपके परिवार को हमारी शादी में सादर आमंत्रित करते हैं,<br/>हम अपने परिवार के शुभ अवसर पर आपकी उपस्थिति का बेसब्री से इंतजार करेंगे।";
+  document.getElementById("inv").style.fontFamily = 'Poppins';
+  document.getElementById("inv").style.fontSize = '20px';
+  document.getElementById("inv").style.fontWeight = 'bold';
+  if(new Date("Oct 28, 2022 11:30:00").getTime() - new Date().getTime() > 0){
+    document.getElementById("getMarry").innerHTML = "सगाई कर रहे हैं";
+    document.getElementById("getMarry").style.fontFamily = 'Ranga';
+    document.getElementById("getMarry").style.fontSize = '50px';
+    document.getElementById("vdet").innerHTML = "28 अक्टूबर 2022 को त्रिवेणी दर्शन, प्रयागराज, उत्तर प्रदेश में";
+    document.getElementById("vdet").style.fontFamily = 'Pragati Narrow';
+    document.getElementById("vdet").style.fontSize = '30px';  
+    document.getElementById("countdownHead").innerHTML = "सगाई के लिए बचा समय";
+    document.getElementById("countdownHead").style.fontFamily = 'Inknut Antiqua';
+    document.getElementById("countdownHead").style.fontSize = '20px';
+    document.getElementById("daysHead").innerHTML = "दिन जब तक हम दोनों मंगेतर नहीं बन जाते "+"<span><img class='ring' src='./assets/img/ring.png' alt=''></span>";
+    document.getElementById("daysHead").style.fontFamily = 'Inknut Antiqua';
+    document.getElementById("daysHead").style.fontSize = '20px';
+    document.getElementById("dineAndDance").innerHTML = "आते समय अपने डांसिंग शूज़ लेकर आएं";
+    document.getElementById("dineAndDance").style.fontFamily = 'Kalam';
+    document.getElementById("dineAndDance").style.fontSize = '25px';
+    document.getElementById("venueBut").innerHTML = "सगाई की जगह";
+    document.getElementById("venueBut").style.fontFamily = 'Yantramanav';
+    document.getElementById("inv").innerHTML = "परमपिता परमात्मा की कृपा से,<br/>हम आपको और आपके परिवार को हमारी सगाई में सादर आमंत्रित करते हैं,<br/>हम अपने परिवार के शुभ अवसर पर आपकी उपस्थिति का बेसब्री से इंतजार करेंगे।";
+    document.getElementById("inv").style.fontFamily = 'Poppins';
+    document.getElementById("inv").style.fontSize = '20px';
+    document.getElementById("inv").style.fontWeight = 'bold';
+  }
+  document.getElementById("inviteBut").innerHTML = "निमंत्रण कार्ड डाउनलोड करें";
+  document.getElementById("inviteBut").style.fontFamily = 'Yantramanav';
+  document.getElementById("happ").innerHTML = "कृपया हमारी खुशी में शामिल हों!";
+  document.getElementById("happ").style.fontFamily = 'Rozha One';
+  document.getElementById("happ").style.fontSize = '30px';
+  document.getElementById("fff").innerHTML = "आपके साथ हमारे परिवार के शुभ क्षण का जश्न मनाने के लिए इंतजार नहीं कर सकता!<br/>किसी भी प्रश्न के लिए बस एक पिंग दूर: 6033174520";
+  document.getElementById("fff").style.fontFamily = 'Teko';
+  document.getElementById("fff").style.fontSize = '30px';
+
+}
 
 function setTheme() {
   const rndInt = randomIntFromInterval(1, 5)
@@ -49,6 +134,8 @@ function getLocation() {
 
 
 function ssss() {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("cf").style.display = "none";
   getLocation().then((res) => {
     let data = {
       lat: res.coords.latitude,
@@ -83,9 +170,9 @@ function sendEmail(coords) {
       // alert("mail sent successfully")
     });
 }
-let audio ="my_audio";
-if(new Date("Oct 28, 2022 11:30:00").getTime()- new Date().getTime() > 0){
-  audio="engageAudio"
+let audio = "my_audio";
+if (new Date("Oct 28, 2022 11:30:00").getTime() - new Date().getTime() > 0) {
+  audio = "engageAudio"
 }
 document.getElementById(audio).play();
 $(document).on('click', function () {
@@ -118,15 +205,18 @@ var x = setInterval(function () {
   if (distance < 0) {
     countDownDate = new Date("Feb 27, 2023 22:30:00").getTime();
     distance = countDownDate - now;
-    document.getElementById("impDate").innerHTML ="27 February 2023"
-    document.getElementById("impVenue").innerHTML ="Banshi Bhawan"
-    document.getElementById("venueLink").href ="https://goo.gl/maps/D53P8NLc4688vte59"
-    document.getElementById("getMarry").innerHTML ="Are getting married"
-    document.getElementById("countdownHead").innerHTML ="Wedding countdown"
-    document.getElementById("mrAndMrs").style.display ="block";
-    document.getElementById("daysHead").style.display ="none";
-    document.getElementById("engage").innerHTML ="wedding"
-    document.getElementById("dineAndDance").innerHTML="dinner & dancing to follow"
+    if(lang=='eng'){
+      document.getElementById("impDate").innerHTML = "27 February 2023"
+      document.getElementById("impVenue").innerHTML = "Banshi Bhawan"
+      document.getElementById("venueLink").href = "https://goo.gl/maps/D53P8NLc4688vte59"
+      document.getElementById("getMarry").innerHTML = "Are getting married"
+      document.getElementById("countdownHead").innerHTML = "Wedding countdown"
+      document.getElementById("mrAndMrs").style.display = "block";
+      document.getElementById("daysHead").style.display = "none";
+      document.getElementById("engage").innerHTML = "wedding"
+      document.getElementById("dineAndDance").innerHTML = "dinner & dancing to follow"
+
+    }
   }
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -158,12 +248,12 @@ var x = setInterval(function () {
     "<span class='block'>" + "<span class='timeUnit'>" + hoursNo.join("</span><span class='timeUnit'>") + "</span>" + "<br><br><center><label id='timeLabel'>Hours</label></center>" + "</span>" +
     "<span class='block'>" + "<span class='timeUnit'>" + minutesNo.join("</span><span class='timeUnit'>") + "</span>" + "<br><br><center><label id='timeLabel'>Mins</label></center>" + "</span>" +
     "<span class='block'>" + "<span class='timeUnit'>" + secondsNo.join("</span><span class='timeUnit'>") + "</span>" + "<br><br><center><label id='timeLabel'>Secs</label></center>" + "</span>" + "</div>"
- 
-    
+
+
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("getMarry").innerHTML ="Just got married"
+    document.getElementById("getMarry").innerHTML = "Just got married"
     document.getElementById("time").innerHTML = "Bless the married couple for happy life!";
     document.getElementById("timeHead").style.display = 'none';
     document.getElementById("time").style.marginTop = '-20px';

@@ -38,11 +38,32 @@
    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
    <link rel="stylesheet" href="./css/style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet"> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ranga:wght@700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet"> 
 </head>
-
+ 
 <body id="bod" onload="ssss()">
-
+   <div class="form-popup" id="myForm">
+      <div class="lngBox">
+         <h1 id="lngH">Choose your langauge / अपनी भाषा चुनें</h1>
+         <button id="lngB1" type="button" class="btn" onclick="selectLang('hin')">हिन्दी</button>
+         <button id="lngB2" type="button" class="btn" onclick="selectLang('eng')">English</button>
+      </div>
+    </div>
+    <section id="cf">
    <!-- partial:index.partial.html -->
    <video autoplay muted loop id="myVideo">
       <source src="./assets/bg/bg4.mp4" type="video/mp4" id="vdoSrc">
@@ -54,12 +75,12 @@
    <section id="media"></section>
    <div class="wrap">
       <div class="title">
-         <h1>Rohit </h1>
+         <h1 id="grmName">Rohit </h1>
          <img src="./assets/img/h5.png" alt="image-top-left" class="">
          <!-- <h2>&</h2> -->
-         <h1>Manita</h1>
+         <h1 id="brdName">Manita</h1>
          <h3 id="getMarry">Are getting engaged</h3>
-         <p>
+         <p id="vdet">
             on <span class="date" id="impDate">28 October 2022</span></29>, At <span class="place" id="impVenue">Triveni Darshan</span> , Prayagraj,
             Uttar Pradesh
          </p>
@@ -77,20 +98,22 @@
    <div class="actions">
       <center>
          <a href="https://goo.gl/maps/4wEDBzZnbfqyHabt6" target="_blank" id="venueLink">
-            <div class="venue">Checkout Venue</div>
+            <div class="venue" id="venueBut">Checkout Venue</div>
          </a>
       </center><br>
+      <center>
       <a href="./invitation/invite.pdf"
          download="Rohit-Manita-Engagement-Invitation-28 Oct">
-         <div class="invite">Download Invitation Card</div>
+         <div class="invite" id="inviteBut">Download Invitation Card</div>
       </a>
+   </center>
    </div>
-   <p class="footer">With the divine grace of the almighty,<br>
+   <p class="footer" id="inv">With the divine grace of the almighty,<br>
       We cordially invite you and your family to
       our <span id="engage">engagement</span> <br>
      We would eagerly await your kind presence in auspicious occasion of our family.
    </p>
-   <p class="happiness">Join us in our happiness!<br>
+   <p class="happiness" id="happ">Join us in our happiness!<br>
    <div class="music">
       <audio src="./assets/mp3/engagment.mp3" id="engageAudio" loop="loop"></audio>
       <audio src="./assets/mp3/song.mp3" id="my_audio" loop="loop"></audio>
@@ -101,7 +124,7 @@
       <img class="tile__img" src="./assets/img/main.png" alt=""><br>
       <img class="std__img" src="./assets/img/std.png" alt="">
    </div>
-   <p class="footer">
+   <p class="footer" id="fff">
       Can't wait to celebrate auspicious moment of our family with you! <br>
       Just a ping away for any queries: +91 9767301664
       <span></span>
@@ -116,11 +139,11 @@
 
    <script src="./js/script.js"></script>
    <p id="demo"></p>
-   <!-- <div class="music-button">
-
-      <img src="./assets/img/play.png" id="play" class="bottom-left-play-pause" onclick="playAudio()"><br>
-      <img src="./assets/img/pause.png" id="pause" class="bottom-left-pause-pause" onclick="pauseAudio()">
-   </div> -->
+   <div class="music-button">
+      <img src="./assets/img/hin.png" id="play" class="bottom-left-play-pause" onclick="changeLang('eng')"><br>
+      <img src="./assets/img/eng.png" id="pause" class="bottom-left-pause-pause" onclick="changeLang('hin')">
+   </div>
+</section>
 </body>
 
 

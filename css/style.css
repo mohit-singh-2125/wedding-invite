@@ -426,7 +426,47 @@ img {
 	left: 0;
 	display: none;
 }
-
+.form-popup {
+	background-color: aliceblue;
+	display: none;
+	position: fixed;
+	top: 10%;
+	height: 14em;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+	padding: 15px;
+  }
+ #lngH{
+	font-size: 25px !important;
+	font-family: 'Ranga', cursive;
+  }
+  .lngBox{
+	display: flex;
+	flex-direction: column;
+	font-size: 30px;
+	text-align: center;
+  }
+.btn{
+	background-color: #f5c0b0; /* Green */
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+#lngB1{
+	font-family: 'Ranga', cursive;
+	font-weight: bold;
+	font-size: 20px !important;
+}
+#lngB2{
+		font-family: 'Dancing Script', cursive;
+		font-weight: bold;
+		font-size: 20px !important;
+}
 .title h1 {
 	font-family: 'Dancing Script', cursive;
 	font-weight: bold;
@@ -603,7 +643,7 @@ body {
 	display: none;
 }
 .invite {
-	width: auto;
+	width: 170px;
 	height: auto;
 	background-color: #674ea7;
 	border-radius: 16px;
@@ -781,20 +821,30 @@ a {
 	margin: -10px;
 }
 
+.bottom-left-play-pause:hover{
+	opacity: 1;
+}
+.bottom-left-pause-pause:hover{
+	opacity: 1;
+}
 .bottom-left-play-pause {
-	max-width: 1.5rem;
+	max-width: 2.5rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	display: none;
+	margin: 0px 0px 5px 5px;
+	opacity: 0.5;
 }
 
 .bottom-left-pause-pause {
-	max-width: 1.5rem;
+	max-width: 2.5rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	margin: 0px 0px 5px 5px;
 	/* display: block; */
+	opacity: 0.5;
 }
 
 @media only screen and (max-width: 768px) {
