@@ -10,6 +10,14 @@ function randomIntFromInterval(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 var lang = 'eng';
+var countDownDate = new Date("Oct 28, 2022 11:30:00").getTime();
+var now = new Date().getTime();
+let audio = "my_audio";
+if (new Date("Oct 28, 2022 11:30:00").getTime() - new Date().getTime() < 0) {
+  audio = "engageAudio"
+}
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
 function changeLang(typ){
 if(typ=='eng'){
   document.getElementById("play").style.display = "none";
@@ -19,6 +27,19 @@ if(typ=='eng'){
 
     $("#cf").load("#cf");
 
+    $(document).ready(function () {
+      console.log(":vgjsadvdsavsv11")
+      document.getElementById(audio).play();
+      if (new Date("Oct 28, 2022 11:30:00").getTime() - new Date().getTime() < 0) {
+        console.log(":vgjsadvdsavsv22",audio)
+        audio = "engageAudio"
+        document.getElementById(audio).play();
+        distance=-1;
+        lang='eng';
+        engShaadi();
+      }
+
+    });
 }
 else{
   document.getElementById("play").style.display = "block";
@@ -170,10 +191,7 @@ function sendEmail(coords) {
       // alert("mail sent successfully")
     });
 }
-let audio = "my_audio";
-if (new Date("Oct 28, 2022 11:30:00").getTime() - new Date().getTime() > 0) {
-  audio = "engageAudio"
-}
+
 document.getElementById(audio).play();
 $(document).on('click', function () {
   document.getElementById(audio).play();
@@ -193,19 +211,26 @@ function pauseAudio() {
   document.getElementById(audio).pause();
 }
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 28, 2022 11:30:00").getTime();
+
 // Update the count down every 1 second
-var x = setInterval(function () {
+function engShaadi(bool){
+
 
   // Get todays date and time
-  var now = new Date().getTime();
+  if (new Date("Oct 28, 2022 11:30:00").getTime() - new Date().getTime() < 0) {
+    distance = -1
+    audio='engageAudio'
+  }
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+  console.log("vsjadsadshd11111111",distance)
   if (distance < 0) {
+    console.log(":auddddddddddd",audio)
     countDownDate = new Date("Feb 27, 2023 22:30:00").getTime();
     distance = countDownDate - now;
+    console.log("sdhsadbksadh",lang)
     if(lang=='eng'){
+      //shadddddd
+      console.log("hsabadsbhbsdbhdsahbds")
       document.getElementById("impDate").innerHTML = "27 February 2023"
       document.getElementById("impVenue").innerHTML = "Banshi Bhawan"
       document.getElementById("venueLink").href = "https://goo.gl/maps/D53P8NLc4688vte59"
@@ -260,6 +285,11 @@ var x = setInterval(function () {
     document.getElementById("time").style.marginBottom = '30px';
     document.getElementById("dineAndDance").style.display = 'none';
   }
+
+}
+var x = setInterval(function () {
+engShaadi(false)
+
 }, 1000);
 var video = document.getElementById("myVideo");
 var btn = document.getElementById("myBtn");
