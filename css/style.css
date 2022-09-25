@@ -828,7 +828,7 @@ a {
 	opacity: 1;
 }
 .bottom-left-play-pause {
-	max-width: 2.5rem;
+	max-width: 3.5rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -838,7 +838,7 @@ a {
 }
 
 .bottom-left-pause-pause {
-	max-width: 2.5rem;
+	max-width: 3.5rem;
 	position: fixed;
 	bottom: 0;
 	left: 0;
