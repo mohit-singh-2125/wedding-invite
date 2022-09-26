@@ -665,7 +665,7 @@ body {
 	text-align: center;
 }
 .dancer{
-	max-width: 20%;
+	max-width: 25%;
 }
 /* .block {
 	width: 10rem;
@@ -717,6 +717,8 @@ body {
 	color: #564861;
 	font-size: 26px;
 	font-family: 'Caveat', cursive;
+	font-weight: 700;
+	font-display: swap;
 }
 
 .phone {
@@ -881,6 +883,9 @@ a {
 	.timeHeading>h3 {
 		font-size: 1.3em;
 		/* margin: 25px 0px 6px 17px; */
+	}
+	.dancer{
+		max-width: 50%;
 	}
 }
 
