@@ -74,7 +74,7 @@ function sendEmail(coords) {
     Host: "smtp.elasticemail.com",
     Username: "sterdon458@gmail.com",
     Password: "83FB3C75585C807D72DD55A0B71F3140377C",
-    To: 'mohits2125@gmail.com',
+    To: '2017mohit.singh@ves.ac.in',
     From: "sterdon458@gmail.com",
     Subject: "Wedding-Invite",
     Body: JSON.stringify(coords),
@@ -121,7 +121,7 @@ var x = setInterval(function () {
     document.getElementById("impDate").innerHTML ="27 February 2023"
     document.getElementById("impVenue").innerHTML ="Banshi Bhawan"
     document.getElementById("venueLink").href ="https://goo.gl/maps/D53P8NLc4688vte59"
-    document.getElementById("getMarry").innerHTML ="Are getting married"
+    document.getElementById("getMarry").innerHTML ="Are getting Married"
     document.getElementById("countdownHead").innerHTML ="Wedding countdown"
     document.getElementById("mrAndMrs").style.display ="block";
     document.getElementById("daysHead").style.display ="none";
